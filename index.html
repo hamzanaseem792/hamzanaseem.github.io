@@ -1,197 +1,234 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Hamza Naseem - ML/NLP/LLM Systems Engineer specializing in RAG, semantic search, and multi-agent workflows" />
   <title>Hamza Naseem — ML / NLP / LLM Systems</title>
-  <style>
-    :root { --accent:#0070f3; --text:#111; --muted:#555; --card:#f7f7f8; --border:#e6e6e8; }
-    body { font-family: Arial, sans-serif; max-width: 920px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: var(--text); }
-    header { display:flex; gap:18px; align-items:center; flex-wrap:wrap; }
-    .photo { width: 128px; height: 128px; border-radius: 50%; object-fit: cover; border: 1px solid var(--border); }
-    h1 { margin: 0; font-size: 28px; }
-    .tagline { margin: 8px 0 0; color: var(--muted); max-width: 70ch; }
-    .links a { margin-right: 12px; }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .pillrow { margin-top: 14px; display:flex; flex-wrap:wrap; gap:8px; }
-    .pill { background: var(--card); border: 1px solid var(--border); padding: 6px 10px; border-radius: 999px; font-size: 13px; color: #222; }
-    h2 { margin-top: 34px; border-top: 1px solid var(--border); padding-top: 18px; }
-    .grid { display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
-    @media (max-width: 760px) { .grid { grid-template-columns: 1fr; } }
-    .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 14px 12px; }
-    .card h3 { margin: 0 0 6px; font-size: 16px; }
-    .meta { color: var(--muted); font-size: 13px; margin: 0 0 10px; }
-    ul { margin: 10px 0 0 18px; }
-    .small { font-size: 13px; color: var(--muted); }
-    footer { margin: 40px 0 20px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--border); padding-top: 14px; }
-    .kpi { font-weight: 700; }
-    .nowrap { white-space: nowrap; }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <header>
-    <!-- 1) Put your photo in the same folder as this file and name it exactly: photo.jpg -->
-    <img class="photo" src="photo.jpg" alt="Hamza Naseem" />
+  <div class="container">
+    <header class="header">
+      <div class="header-content">
+        <div class="photo-wrapper">
+          <img class="photo" src="photo.jpg" alt="Hamza Naseem" />
+        </div>
 
-    <div>
-      <h1>Hamza Naseem</h1>
-      <p class="tagline">
-        Machine Learning Master’s student (JMU Würzburg) building <span class="nowrap">applied ML</span> and
-        <span class="nowrap">LLM-based</span> systems — NLP, Retrieval / RAG, and multi-agent workflows — with a focus
-        on <strong>reliability, evaluation, and efficiency</strong>.
-      </p>
+        <div class="header-text">
+          <h1 class="name">Hamza Naseem</h1>
+          <p class="tagline">
+            Machine Learning Master's student (JMU Würzburg) building <span class="nowrap">applied ML</span> and
+            <span class="nowrap">LLM-based</span> systems — NLP, Retrieval / RAG, and multi-agent workflows — with a focus
+            on <strong>reliability, evaluation, and efficiency</strong>.
+          </p>
 
-      <p class="links">
-        <!-- 2) Replace email + links below -->
-        <a href="mailto:hamzagondal792@gmail.com">hamzagondal792@gmail.com</a> ·
-        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noreferrer">LinkedIn</a> ·
-        <a href="https://github.com/YOUR-GITHUB" target="_blank" rel="noreferrer">GitHub</a> ·
-        <a href="https://www.upwork.com/freelancers/~YOUR-UPWORK-ID" target="_blank" rel="noreferrer">Upwork</a>
-      </p>
+          <div class="links">
+            <a href="mailto:hamzagondal792@gmail.com" class="link-item" aria-label="Email">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>Email</span>
+            </a>
+            <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noreferrer" class="link-item" aria-label="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/YOUR-GITHUB" target="_blank" rel="noreferrer" class="link-item" aria-label="GitHub">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+              <span>GitHub</span>
+            </a>
+            <a href="https://www.upwork.com/freelancers/~YOUR-UPWORK-ID" target="_blank" rel="noreferrer" class="link-item" aria-label="Upwork">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.546-1.405 0-2.543-1.14-2.545-2.546V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"/>
+              </svg>
+              <span>Upwork</span>
+            </a>
+          </div>
 
-      <div class="pillrow">
-        <span class="pill">Python</span>
-        <span class="pill">PyTorch</span>
-        <span class="pill">Hugging Face</span>
-        <span class="pill">NLP / NER</span>
-        <span class="pill">IR (BM25)</span>
-        <span class="pill">Semantic Search</span>
-        <span class="pill">RAG</span>
-        <span class="pill">LangGraph / Agents</span>
-        <span class="pill">FAISS</span>
-        <span class="pill">Docker</span>
-        <span class="pill">SQL (PostgreSQL)</span>
-        <span class="pill">Power BI</span>
+          <div class="pillrow">
+            <span class="pill">Python</span>
+            <span class="pill">PyTorch</span>
+            <span class="pill">Hugging Face</span>
+            <span class="pill">NLP / NER</span>
+            <span class="pill">IR (BM25)</span>
+            <span class="pill">Semantic Search</span>
+            <span class="pill">RAG</span>
+            <span class="pill">LangGraph / Agents</span>
+            <span class="pill">FAISS</span>
+            <span class="pill">Docker</span>
+            <span class="pill">SQL (PostgreSQL)</span>
+            <span class="pill">Power BI</span>
+          </div>
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <h2>What I Can Deliver</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>RAG & Semantic Search for Company Knowledge</h3>
-      <p class="meta">Internal docs → ingestion → retrieval → answers you can trust</p>
-      <ul>
-        <li>Document ingestion + chunking strategy (robust to messy PDFs / long docs)</li>
-        <li>Sparse vs dense retrieval trade-offs (BM25 vs embeddings) and hybrid setups</li>
-        <li>Vector search with FAISS (or other vector DBs if required)</li>
-        <li>Evaluation mindset: relevance + correctness + failure-mode handling</li>
-      </ul>
-    </div>
+    <main>
+      <section class="section">
+        <h2 class="section-title">What I Can Deliver</h2>
+        <div class="grid">
+          <div class="card">
+            <div class="card-icon">🔍</div>
+            <h3 class="card-title">RAG & Semantic Search for Company Knowledge</h3>
+            <p class="card-meta">Internal docs → ingestion → retrieval → answers you can trust</p>
+            <ul class="card-list">
+              <li>Document ingestion + chunking strategy (robust to messy PDFs / long docs)</li>
+              <li>Sparse vs dense retrieval trade-offs (BM25 vs embeddings) and hybrid setups</li>
+              <li>Vector search with FAISS (or other vector DBs if required)</li>
+              <li>Evaluation mindset: relevance + correctness + failure-mode handling</li>
+            </ul>
+          </div>
 
-    <div class="card">
-      <h3>NLP Pipelines: Tokenization, Labeling, Fine-tuning</h3>
-      <p class="meta">From raw text → dataset → model → deployment</p>
-      <ul>
-        <li>Dataset creation & cleaning (messy web text, inconsistent formatting)</li>
-        <li>Tokenization alignment for subwords; sequence labeling (NER) pipelines</li>
-        <li>Fine-tuning transformer models with measurable metrics (F1, precision/recall)</li>
-        <li>Lightweight demos (e.g., Streamlit) to show results quickly</li>
-      </ul>
-    </div>
+          <div class="card">
+            <div class="card-icon">🤖</div>
+            <h3 class="card-title">NLP Pipelines: Tokenization, Labeling, Fine-tuning</h3>
+            <p class="card-meta">From raw text → dataset → model → deployment</p>
+            <ul class="card-list">
+              <li>Dataset creation & cleaning (messy web text, inconsistent formatting)</li>
+              <li>Tokenization alignment for subwords; sequence labeling (NER) pipelines</li>
+              <li>Fine-tuning transformer models with measurable metrics (F1, precision/recall)</li>
+              <li>Lightweight demos (e.g., Streamlit) to show results quickly</li>
+            </ul>
+          </div>
 
-    <div class="card">
-      <h3>AI Agents & Workflow Automation (Engineering-first)</h3>
-      <p class="meta">Agentic workflows that are reliable, not “magic”</p>
-      <ul>
-        <li>LangGraph-based multi-agent orchestration (generator / predictor / manager patterns)</li>
-        <li>Guardrails: validation, fallbacks, and “flag uncertainty instead of guessing”</li>
-        <li>API integration and operational pipelines (Fast iteration, measurable outputs)</li>
-      </ul>
-    </div>
+          <div class="card">
+            <div class="card-icon">⚙️</div>
+            <h3 class="card-title">AI Agents & Workflow Automation (Engineering-first)</h3>
+            <p class="card-meta">Agentic workflows that are reliable, not "magic"</p>
+            <ul class="card-list">
+              <li>LangGraph-based multi-agent orchestration (generator / predictor / manager patterns)</li>
+              <li>Guardrails: validation, fallbacks, and "flag uncertainty instead of guessing"</li>
+              <li>API integration and operational pipelines (Fast iteration, measurable outputs)</li>
+            </ul>
+          </div>
 
-    <div class="card">
-      <h3>Data Preparation & Business Reporting</h3>
-      <p class="meta">Turn raw data into clean, usable reporting</p>
-      <ul>
-        <li>Data cleaning, validation, and structured preparation for analytics</li>
-        <li>Dashboards & reporting in <span class="nowrap">Power BI</span></li>
-        <li>SQL-first thinking (tables, joins, reproducible transformations)</li>
-      </ul>
-    </div>
+          <div class="card">
+            <div class="card-icon">📊</div>
+            <h3 class="card-title">Data Preparation & Business Reporting</h3>
+            <p class="card-meta">Turn raw data into clean, usable reporting</p>
+            <ul class="card-list">
+              <li>Data cleaning, validation, and structured preparation for analytics</li>
+              <li>Dashboards & reporting in <span class="nowrap">Power BI</span></li>
+              <li>SQL-first thinking (tables, joins, reproducible transformations)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Selected Work (Real Projects)</h2>
+        <div class="grid">
+          <div class="card featured">
+            <div class="card-badge">2024</div>
+            <h3 class="card-title">Automotive Named Entity Recognition System</h3>
+            <p class="card-meta">BERT + Hugging Face + Streamlit · Domain-specific dataset creation</p>
+            <ul class="card-list">
+              <li>Extracted <span class="kpi">5 entity types</span> from automotive documents with limited public data</li>
+              <li>Built custom annotated dataset (IOB) + augmentation (<span class="kpi">+500 examples</span>)</li>
+              <li>Fine-tuned BERT-base-cased: <span class="kpi">87% F1</span> (89% precision, 85% recall)</li>
+              <li>Deployed Streamlit demo for real-time extraction</li>
+            </ul>
+            <p class="card-footer">Shows: dataset creation, tokenization alignment, fine-tuning, evaluation, deployment.</p>
+          </div>
+
+          <div class="card featured">
+            <div class="card-badge">2025</div>
+            <h3 class="card-title">Medical Semantic Search Engine</h3>
+            <p class="card-meta">SBERT + FAISS + BM25 · Dense vs sparse retrieval evaluation</p>
+            <ul class="card-list">
+              <li>Built a diabetes-focused IR system with <span class="kpi">200+ document</span> corpus (CDC/WHO)</li>
+              <li>Compared SBERT vs BM25: <span class="kpi">MRR@10 0.26 vs 0.08</span>, <span class="kpi">Recall@10 0.30 vs 0.19</span></li>
+              <li>Handled SBERT's 512-token limit via chunk optimization + evaluation framework</li>
+            </ul>
+            <p class="card-footer">Shows: IR fundamentals, retrieval trade-offs, practical evaluation.</p>
+          </div>
+
+          <div class="card featured">
+            <div class="card-badge">Ongoing</div>
+            <h3 class="card-title">Multi-Agent ML Framework (JMU CV Lab)</h3>
+            <p class="card-meta">LangGraph + PyTorch · Applied ML systems and efficiency</p>
+            <ul class="card-list">
+              <li>Built a production multi-agent framework for neural architecture search</li>
+              <li>Reduced GPU waste by <span class="kpi">60–80%</span> and improved throughput by <span class="kpi">~10×</span></li>
+              <li>Fine-tuned Qwen-7B with LoRA to predict performance: <span class="kpi">5–18% MAPE</span></li>
+            </ul>
+            <p class="card-footer">Shows: agent orchestration, system design, measurable impact.</p>
+          </div>
+
+          <div class="card featured">
+            <div class="card-badge">2022</div>
+            <h3 class="card-title">Software Engineering + Data Work (Developlogix)</h3>
+            <p class="card-meta">React + APIs + data cleaning + Power BI</p>
+            <ul class="card-list">
+              <li>Built and maintained frontend components integrated with backend APIs</li>
+              <li>Contributed to data cleaning, validation, and structured preparation for reporting</li>
+              <li>Supported dashboards in <span class="nowrap">Power BI</span> for internal stakeholders</li>
+            </ul>
+            <p class="card-footer">Shows: shipping mindset, data handling, stakeholder-facing reporting.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Certifications (Verified on Resume)</h2>
+        <div class="card certifications-card">
+          <ul class="cert-list">
+            <li>
+              <span class="cert-name">Retrieval Augmented Generation (RAG)</span>
+              <span class="cert-org">— DeepLearning.AI (2025)</span>
+            </li>
+            <li>
+              <span class="cert-name">CyberOps Associate</span>
+              <span class="cert-org">— Cisco (2025)</span>
+            </li>
+            <li>
+              <span class="cert-name">Network Security (Ethical Hacking)</span>
+              <span class="cert-org">— Cisco (2024)</span>
+            </li>
+            <li>
+              <span class="cert-name">AI Agents Fundamentals</span>
+              <span class="cert-org">— Hugging Face (2024)</span>
+            </li>
+            <li>
+              <span class="cert-name">Machine Learning & Deep Learning Foundations</span>
+              <span class="cert-org">— Kaggle (2023)</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Contact</h2>
+        <div class="card contact-card">
+          <p class="contact-info">
+            <strong>Email:</strong> <a href="mailto:hamzagondal792@gmail.com">hamzagondal792@gmail.com</a><br />
+            <strong>Location:</strong> Würzburg, Germany (Open to remote / EU)<br />
+            <strong>Upwork:</strong> <a href="https://www.upwork.com/freelancers/~YOUR-UPWORK-ID" target="_blank" rel="noreferrer">Profile Link</a>
+          </p>
+          <p class="contact-note">
+            Note: For client work, I prefer simple MVPs first, then iterate with clear metrics (relevance, accuracy, latency, cost).
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Hamza Naseem · Built as a simple, high-signal one-page portfolio.</p>
+    </footer>
   </div>
 
-  <h2>Selected Work (Real Projects)</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Automotive Named Entity Recognition System (2024)</h3>
-      <p class="meta">BERT + Hugging Face + Streamlit · Domain-specific dataset creation</p>
-      <ul>
-        <li>Extracted <span class="kpi">5 entity types</span> from automotive documents with limited public data</li>
-        <li>Built custom annotated dataset (IOB) + augmentation (<span class="kpi">+500 examples</span>)</li>
-        <li>Fine-tuned BERT-base-cased: <span class="kpi">87% F1</span> (89% precision, 85% recall)</li>
-        <li>Deployed Streamlit demo for real-time extraction</li>
-      </ul>
-      <p class="small">Shows: dataset creation, tokenization alignment, fine-tuning, evaluation, deployment.</p>
-    </div>
-
-    <div class="card">
-      <h3>Medical Semantic Search Engine (2025)</h3>
-      <p class="meta">SBERT + FAISS + BM25 · Dense vs sparse retrieval evaluation</p>
-      <ul>
-        <li>Built a diabetes-focused IR system with <span class="kpi">200+ document</span> corpus (CDC/WHO)</li>
-        <li>Compared SBERT vs BM25: <span class="kpi">MRR@10 0.26 vs 0.08</span>, <span class="kpi">Recall@10 0.30 vs 0.19</span></li>
-        <li>Handled SBERT’s 512-token limit via chunk optimization + evaluation framework</li>
-      </ul>
-      <p class="small">Shows: IR fundamentals, retrieval trade-offs, practical evaluation.</p>
-    </div>
-
-    <div class="card">
-      <h3>Multi-Agent ML Framework (JMU CV Lab) — Ongoing</h3>
-      <p class="meta">LangGraph + PyTorch · Applied ML systems and efficiency</p>
-      <ul>
-        <li>Built a production multi-agent framework for neural architecture search</li>
-        <li>Reduced GPU waste by <span class="kpi">60–80%</span> and improved throughput by <span class="kpi">~10×</span></li>
-        <li>Fine-tuned Qwen-7B with LoRA to predict performance: <span class="kpi">5–18% MAPE</span></li>
-      </ul>
-      <p class="small">Shows: agent orchestration, system design, measurable impact.</p>
-    </div>
-
-    <div class="card">
-      <h3>Software Engineering + Data Work (Developlogix, 2022)</h3>
-      <p class="meta">React + APIs + data cleaning + Power BI</p>
-      <ul>
-        <li>Built and maintained frontend components integrated with backend APIs</li>
-        <li>Contributed to data cleaning, validation, and structured preparation for reporting</li>
-        <li>Supported dashboards in <span class="nowrap">Power BI</span> for internal stakeholders</li>
-      </ul>
-      <p class="small">Shows: shipping mindset, data handling, stakeholder-facing reporting.</p>
-    </div>
-  </div>
-
-  <h2>Certifications (Verified on Resume)</h2>
-  <div class="card">
-    <ul>
-      <li>Retrieval Augmented Generation (RAG) — DeepLearning.AI (2025)</li>
-      <li>CyberOps Associate — Cisco (2025)</li>
-      <li>Network Security (Ethical Hacking) — Cisco (2024)</li>
-      <li>AI Agents Fundamentals — Hugging Face (2024)</li>
-      <li>Machine Learning & Deep Learning Foundations — Kaggle (2023)</li>
-    </ul>
-  </div>
-
-  <h2>Contact</h2>
-  <div class="card">
-    <p style="margin:0;">
-      Email: <a href="mailto:hamzagondal792@gmail.com">hamzagondal792@gmail.com</a><br />
-      Location: Würzburg, Germany (Open to remote / EU)<br />
-      Upwork: <a href="https://www.upwork.com/freelancers/~YOUR-UPWORK-ID" target="_blank" rel="noreferrer">Profile Link</a>
-    </p>
-    <p class="small" style="margin-top:10px;">
-      Note: For client work, I prefer simple MVPs first, then iterate with clear metrics (relevance, accuracy, latency, cost).
-    </p>
-  </div>
-
-  <footer>
-    © <span id="y"></span> Hamza Naseem · Built as a simple, high-signal one-page portfolio.
-  </footer>
-
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
-```
+
+
