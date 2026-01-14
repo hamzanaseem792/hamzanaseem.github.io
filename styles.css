@@ -670,6 +670,82 @@ body {
 }
 
 /* ============================================
+   Services / What I Can Deliver
+   ============================================ */
+
+.services-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.service-item {
+  background-color: var(--light-navy);
+  border: 1px solid var(--lightest-navy);
+  border-radius: 4px;
+  padding: 2rem;
+  margin-bottom: 25px;
+  transition: var(--transition);
+}
+
+.service-item:hover {
+  background-color: var(--lightest-navy);
+  border-color: var(--green);
+  transform: translateX(5px);
+}
+
+.service-item:last-child {
+  margin-bottom: 0;
+}
+
+.service-header {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--lightest-navy);
+}
+
+.service-title {
+  color: var(--lightest-slate);
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.service-subtitle {
+  color: var(--green);
+  font-family: 'SF Mono', 'Monaco', monospace;
+  font-size: 14px;
+  margin: 0;
+}
+
+.service-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-details li {
+  position: relative;
+  padding-left: 25px;
+  padding-bottom: 12px;
+  color: var(--slate);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.service-details li:last-child {
+  padding-bottom: 0;
+}
+
+.service-details li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--green);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* ============================================
    Certifications
    ============================================ */
 
@@ -792,7 +868,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--dark-slate);
+  background-color: var(--slate);
   border: 3px solid var(--navy);
   border-radius: 10px;
 }
@@ -800,6 +876,7 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--slate);
 }
+
 
 
 
