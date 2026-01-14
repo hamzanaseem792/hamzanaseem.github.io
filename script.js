@@ -166,11 +166,50 @@
     });
   });
 
+  // Guestbook form handler
+  const guestbookForm = document.getElementById('guestbookForm');
+  if (guestbookForm) {
+    guestbookForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nameInput = document.getElementById('visitorName');
+      const name = nameInput.value.trim();
+      
+      if (name) {
+        if (window.portfolioAnalytics) {
+          window.portfolioAnalytics.saveVisitorName(name);
+        }
+        
+        // Show success message
+        const successMsg = document.createElement('p');
+        successMsg.className = 'guestbook-success';
+        successMsg.textContent = currentLang === 'de' 
+          ? `Danke, ${name}! Dein Name wurde gespeichert.` 
+          : `Thanks, ${name}! Your name has been saved.`;
+        successMsg.style.color = 'var(--green)';
+        successMsg.style.marginTop = '1rem';
+        
+        const existingMsg = guestbookForm.querySelector('.guestbook-success');
+        if (existingMsg) {
+          existingMsg.remove();
+        }
+        guestbookForm.appendChild(successMsg);
+        
+        nameInput.value = '';
+        
+        // Remove message after 3 seconds
+        setTimeout(() => {
+          successMsg.remove();
+        }, 3000);
+      }
+    });
+  }
+
   // Console greeting
-  console.log('%c👋 Thanks for checking out my portfolio!', 'font-size: 16px; font-weight: bold; color: #64ffda;');
-  console.log('%cFeel free to reach out if you\'d like to collaborate.', 'font-size: 12px; color: #8892b0;');
+  console.log('%c👋 Thanks for checking out my portfolio!', 'font-size: 16px; font-weight: bold; color: #d4af37;');
+  console.log('%cFeel free to reach out if you\'d like to collaborate.', 'font-size: 12px; color: #c0c0c0;');
 
 })();
+
 
 
 
