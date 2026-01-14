@@ -675,16 +675,11 @@ body {
 
 .services-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
   max-width: 1000px;
   margin: 0 auto;
-}
-
-.service-column {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+  align-items: stretch;
 }
 
 .service-item {
@@ -693,6 +688,8 @@ body {
   border-radius: 4px;
   padding: 2rem;
   transition: var(--transition);
+  display: flex;
+  flex-direction: column;
 }
 
 .service-item:hover {
@@ -886,6 +883,7 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--slate);
 }
+
 
 
 
