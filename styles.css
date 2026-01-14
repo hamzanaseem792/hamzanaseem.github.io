@@ -85,7 +85,7 @@ body {
   padding: 0 50px;
   width: 100%;
   height: var(--nav-height);
-  background-color: rgba(10, 25, 47, 0.85);
+  background-color: rgba(0, 31, 63, 0.85);
   backdrop-filter: blur(10px);
   transition: var(--transition);
 }
@@ -105,6 +105,12 @@ body {
   color: var(--green);
   text-decoration: none;
   font-family: 'SF Mono', 'Monaco', monospace;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
 .nav-links {
@@ -135,17 +141,58 @@ body {
   text-align: right;
 }
 
+/* ============================================
+   Language Switcher
+   ============================================ */
+
+.lang-switcher {
+  background-color: transparent;
+  border: 1px solid var(--lightest-navy);
+  border-radius: 4px;
+  padding: 8px 16px;
+  color: var(--light-slate);
+  font-family: 'SF Mono', 'Monaco', monospace;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
+}
+
+.lang-switcher:hover {
+  background-color: var(--light-navy);
+  border-color: var(--green);
+  color: var(--green);
+}
+
+.lang-code {
+  font-weight: 600;
+}
+
 @media (max-width: 768px) {
   .nav {
     padding: 0 25px;
   }
   
+  .nav-right {
+    gap: 15px;
+  }
+  
   .nav-links {
-    gap: 20px;
+    gap: 15px;
   }
   
   .nav-link::before {
     display: none;
+  }
+  
+  .lang-switcher {
+    padding: 6px 12px;
+    font-size: 12px;
+    min-width: 45px;
   }
 }
 
@@ -883,6 +930,7 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--slate);
 }
+
 
 
 
