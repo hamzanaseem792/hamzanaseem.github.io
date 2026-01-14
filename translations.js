@@ -9,6 +9,7 @@ const translations = {
       experience: "Experience",
       projects: "Projects",
       services: "Services",
+      guestbook: "Guestbook",
       contact: "Contact"
     },
     hero: {
@@ -90,6 +91,13 @@ const translations = {
     certifications: {
       title: "Certifications"
     },
+    guestbook: {
+      title: "Visitor Guestbook",
+      text: "Leave your name to be remembered! (Optional)",
+      placeholder: "Your name (optional)",
+      submit: "Save My Name",
+      note: "Your visit is automatically tracked as a unique visitor. This is just to personalize your experience."
+    },
     contact: {
       title: "Get In Touch",
       text: "I'm currently looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!",
@@ -105,6 +113,7 @@ const translations = {
       experience: "Erfahrung",
       projects: "Projekte",
       services: "Leistungen",
+      guestbook: "Gästebuch",
       contact: "Kontakt"
     },
     hero: {
@@ -186,6 +195,13 @@ const translations = {
     certifications: {
       title: "Zertifizierungen"
     },
+    guestbook: {
+      title: "Besucher-Gästebuch",
+      text: "Hinterlasse deinen Namen, um in Erinnerung zu bleiben! (Optional)",
+      placeholder: "Dein Name (optional)",
+      submit: "Namen speichern",
+      note: "Dein Besuch wird automatisch als eindeutiger Besucher erfasst. Dies dient nur zur Personalisierung deiner Erfahrung."
+    },
     contact: {
       title: "Kontakt aufnehmen",
       text: "Ich suche derzeit nach neuen Möglichkeiten, mein Postfach ist immer offen. Ob Sie eine Frage haben oder nur Hallo sagen möchten, ich werde mein Bestes tun, um Ihnen zu antworten!",
@@ -196,5 +212,6 @@ const translations = {
     }
   }
 };
+
 
 
