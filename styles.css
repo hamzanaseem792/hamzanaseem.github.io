@@ -841,6 +841,91 @@ body {
 }
 
 /* ============================================
+   Guestbook Section
+   ============================================ */
+
+.guestbook-section {
+  padding: 100px 0;
+}
+
+.guestbook-content {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.guestbook-text {
+  font-size: 18px;
+  color: var(--light-slate);
+  margin-bottom: 2rem;
+}
+
+.guestbook-form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.guestbook-input {
+  flex: 1;
+  min-width: 200px;
+  padding: 12px 20px;
+  background-color: var(--light-navy);
+  border: 1px solid var(--lightest-navy);
+  border-radius: 4px;
+  color: var(--lightest-slate);
+  font-size: 16px;
+  font-family: var(--font-sans);
+  transition: var(--transition);
+}
+
+.guestbook-input:focus {
+  outline: none;
+  border-color: var(--green);
+  background-color: var(--lightest-navy);
+}
+
+.guestbook-input::placeholder {
+  color: var(--slate);
+}
+
+.guestbook-note {
+  font-size: 14px;
+  color: var(--slate);
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+.guestbook-success {
+  color: var(--green) !important;
+  font-weight: 500;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .guestbook-form {
+    flex-direction: column;
+  }
+  
+  .guestbook-input {
+    width: 100%;
+  }
+}
+
+/* ============================================
    Contact Section
    ============================================ */
 
@@ -930,6 +1015,7 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--slate);
 }
+
 
 
 
