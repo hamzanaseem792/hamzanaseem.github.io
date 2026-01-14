@@ -146,7 +146,7 @@
 
   // Highlight active nav link on scroll
   const sections = document.querySelectorAll('.section');
-  const navLinks = document.querySelectorAll('.nav-link');
+  const navLinkElements = document.querySelectorAll('.nav-link');
 
   window.addEventListener('scroll', () => {
     let current = '';
@@ -158,7 +158,7 @@
       }
     });
 
-    navLinks.forEach(link => {
+    navLinkElements.forEach(link => {
       link.classList.remove('active');
       if (link.getAttribute('href') === `#${current}`) {
         link.classList.add('active');
@@ -166,11 +166,44 @@
     });
   });
 
+  // Mobile menu toggle
+  const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+  const navLinks = document.getElementById('navLinks');
+  
+  if (mobileMenuToggle && navLinks) {
+    mobileMenuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      // Change icon
+      if (navLinks.classList.contains('active')) {
+        mobileMenuToggle.textContent = '✕';
+      } else {
+        mobileMenuToggle.textContent = '☰';
+      }
+    });
+    
+    // Close menu when clicking a link
+    navLinks.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        mobileMenuToggle.textContent = '☰';
+      });
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!navLinks.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+        navLinks.classList.remove('active');
+        mobileMenuToggle.textContent = '☰';
+      }
+    });
+  }
+
   // Console greeting
   console.log('%c👋 Thanks for checking out my portfolio!', 'font-size: 16px; font-weight: bold; color: #d4af37;');
   console.log('%cFeel free to reach out if you\'d like to collaborate.', 'font-size: 12px; color: #c0c0c0;');
 
 })();
+
 
 
 
