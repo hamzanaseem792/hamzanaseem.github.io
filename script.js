@@ -1,9 +1,85 @@
 // ============================================
-// Portfolio JavaScript - Dark Theme
+// Portfolio JavaScript - Dark Theme with i18n
 // ============================================
 
 (function() {
   'use strict';
+
+  // ============================================
+  // Language Detection & Switching
+  // ============================================
+  
+  // Detect user's language preference
+  function detectLanguage() {
+    // Check localStorage first (user preference)
+    const savedLang = localStorage.getItem('portfolio-lang');
+    if (savedLang) {
+      return savedLang;
+    }
+    
+    // Auto-detect from browser
+    const browserLang = navigator.language || navigator.userLanguage;
+    const langCode = browserLang.split('-')[0].toLowerCase();
+    
+    // If German or from Germany, use German
+    if (langCode === 'de' || browserLang.toLowerCase().includes('de')) {
+      return 'de';
+    }
+    
+    // Default to English
+    return 'en';
+  }
+  
+  // Get translation by key path (e.g., "nav.about")
+  function getTranslation(key, lang) {
+    const keys = key.split('.');
+    let value = translations[lang];
+    for (const k of keys) {
+      value = value?.[k];
+    }
+    return value || key;
+  }
+  
+  // Update all elements with translations
+  function updateTranslations(lang) {
+    const elements = document.querySelectorAll('[data-i18n]');
+    elements.forEach(element => {
+      const key = element.getAttribute('data-i18n');
+      const translation = getTranslation(key, lang);
+      
+      // Handle HTML content
+      if (translation.includes('<strong>')) {
+        element.innerHTML = translation;
+      } else {
+        element.textContent = translation;
+      }
+    });
+    
+    // Update language switcher button
+    const langSwitcher = document.getElementById('langSwitcher');
+    if (langSwitcher) {
+      const langCode = langSwitcher.querySelector('.lang-code');
+      if (langCode) {
+        langCode.textContent = lang.toUpperCase();
+      }
+    }
+    
+    // Save preference
+    localStorage.setItem('portfolio-lang', lang);
+  }
+  
+  // Initialize language
+  let currentLang = detectLanguage();
+  updateTranslations(currentLang);
+  
+  // Language switcher button
+  const langSwitcher = document.getElementById('langSwitcher');
+  if (langSwitcher) {
+    langSwitcher.addEventListener('click', () => {
+      currentLang = currentLang === 'en' ? 'de' : 'en';
+      updateTranslations(currentLang);
+    });
+  }
 
   // Set current year in footer
   const yearElement = document.getElementById('year');
@@ -37,9 +113,9 @@
     const currentScroll = window.pageYOffset;
     
     if (currentScroll > 100) {
-      nav.style.backgroundColor = 'rgba(10, 25, 47, 0.95)';
+      nav.style.backgroundColor = 'rgba(0, 31, 63, 0.95)';
     } else {
-      nav.style.backgroundColor = 'rgba(10, 25, 47, 0.85)';
+      nav.style.backgroundColor = 'rgba(0, 31, 63, 0.85)';
     }
     
     lastScroll = currentScroll;
@@ -95,6 +171,7 @@
   console.log('%cFeel free to reach out if you\'d like to collaborate.', 'font-size: 12px; color: #8892b0;');
 
 })();
+
 
 
 
