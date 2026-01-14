@@ -16,11 +16,17 @@
   <nav class="nav">
     <div class="nav-container">
       <a href="#" class="nav-logo">HN</a>
-      <div class="nav-links">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#experience" class="nav-link">Experience</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#contact" class="nav-link">Contact</a>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="#about" class="nav-link" data-i18n="nav.about">About</a>
+          <a href="#experience" class="nav-link" data-i18n="nav.experience">Experience</a>
+          <a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a>
+          <a href="#services" class="nav-link" data-i18n="nav.services">Services</a>
+          <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
+        </div>
+        <button class="lang-switcher" id="langSwitcher" aria-label="Switch Language">
+          <span class="lang-code">EN</span>
+        </button>
       </div>
     </div>
   </nav>
@@ -31,10 +37,10 @@
       <div class="container">
         <div class="hero-content">
           <div class="hero-text">
-            <p class="hero-greeting">Hi, my name is</p>
+            <p class="hero-greeting" data-i18n="hero.greeting">Hi, my name is</p>
             <h1 class="hero-name">Hamza Naseem.</h1>
-            <h2 class="hero-title">I build ML & LLM systems.</h2>
-            <p class="hero-description">
+            <h2 class="hero-title" data-i18n="hero.title">I build ML & LLM systems.</h2>
+            <p class="hero-description" data-i18n="hero.description">
               I'm a Machine Learning Engineer specializing in <strong>NLP, RAG, and LLM systems</strong>. 
               I build production-ready solutions with a focus on reliability, evaluation, and measurable business impact.
             </p>
@@ -56,26 +62,26 @@
       <div class="container">
         <h2 class="section-heading">
           <span class="heading-number">01.</span>
-          <span class="heading-text">About Me</span>
+          <span class="heading-text" data-i18n="about.title">About Me</span>
           <span class="heading-line"></span>
         </h2>
         <div class="about-grid">
           <div class="about-text">
-            <p>
+            <p data-i18n="about.p1">
               Hello! I'm Hamza, a Machine Learning Engineer based in Würzburg, Germany. I'm passionate about 
               building production-ready NLP and LLM systems that solve real business problems.
             </p>
-            <p>
+            <p data-i18n="about.p2">
               My expertise lies in <strong>RAG architectures</strong>, <strong>semantic search</strong>, and 
               <strong>multi-agent workflows</strong> that deliver measurable business value. I focus on reliability, 
               evaluation, and efficiency—transforming research into scalable solutions.
             </p>
-            <p>
+            <p data-i18n="about.p3">
               Currently pursuing a Master's in Machine Learning at JMU Würzburg, I work on applied ML systems 
               and have experience building production frameworks that reduce costs and improve performance.
             </p>
             <div class="skills-list">
-              <h3>Here are some technologies I work with:</h3>
+              <h3 data-i18n="about.skillsTitle">Here are some technologies I work with:</h3>
               <ul class="skills-grid">
                 <li>Python</li>
                 <li>PyTorch</li>
@@ -102,17 +108,17 @@
       <div class="container">
         <h2 class="section-heading">
           <span class="heading-number">02.</span>
-          <span class="heading-text">Where I've Worked</span>
+          <span class="heading-text" data-i18n="experience.title">Where I've Worked</span>
           <span class="heading-line"></span>
         </h2>
         <div class="experience-container">
           <div class="experience-item">
             <div class="experience-header">
               <h3 class="experience-title">
-                <span class="experience-role">Machine Learning Engineer</span>
-                <span class="experience-company">@ Computer Vision Lab, JMU Würzburg</span>
+                <span class="experience-role" data-i18n="experience.mlEngineer">Machine Learning Engineer</span>
+                <span class="experience-company"> <span data-i18n="experience.at">@</span> Computer Vision Lab, JMU Würzburg</span>
               </h3>
-              <span class="experience-period">October 2024 — Present</span>
+              <span class="experience-period">October 2024 — <span data-i18n="experience.current">Present</span></span>
             </div>
             <ul class="experience-details">
               <li>Developed a production multi-agent ML framework using LangGraph and PyTorch for neural architecture search, <strong>reducing GPU waste by 60–80%</strong> and <strong>improving throughput by ~10×</strong></li>
@@ -131,8 +137,8 @@
           <div class="experience-item">
             <div class="experience-header">
               <h3 class="experience-title">
-                <span class="experience-role">Software Engineer</span>
-                <span class="experience-company">@ Developlogix</span>
+                <span class="experience-role" data-i18n="experience.softwareEngineer">Software Engineer</span>
+                <span class="experience-company"> <span data-i18n="experience.at">@</span> Developlogix</span>
               </h3>
               <span class="experience-period">March 2022 — November 2022</span>
             </div>
@@ -158,7 +164,7 @@
       <div class="container">
         <h2 class="section-heading">
           <span class="heading-number">03.</span>
-          <span class="heading-text">Some Things I've Built</span>
+          <span class="heading-text" data-i18n="projects.title">Some Things I've Built</span>
           <span class="heading-line"></span>
         </h2>
         <div class="projects-grid">
@@ -172,7 +178,7 @@
               </div>
             </div>
             <div class="project-content">
-              <p class="project-category">Featured Project</p>
+              <p class="project-category" data-i18n="projects.featured">Featured Project</p>
               <h3 class="project-name">Automotive NER System</h3>
               <div class="project-description">
                 <p>Built a production-ready NER system for automotive technical documents with limited public data. Created custom annotated dataset with augmentation, achieving high precision entity extraction.</p>
@@ -206,7 +212,7 @@
               </div>
             </div>
             <div class="project-content">
-              <p class="project-category">Featured Project</p>
+              <p class="project-category" data-i18n="projects.featured">Featured Project</p>
               <h3 class="project-name">Medical Semantic Search Engine</h3>
               <div class="project-description">
                 <p>Built a diabetes-focused information retrieval system comparing dense and sparse retrieval methods. Evaluated trade-offs between SBERT embeddings and BM25 for domain-specific medical content.</p>
@@ -237,13 +243,13 @@
       <div class="container">
         <h2 class="section-heading">
           <span class="heading-number">04.</span>
-          <span class="heading-text">What I Can Deliver</span>
+          <span class="heading-text" data-i18n="services.title">What I Can Deliver</span>
           <span class="heading-line"></span>
         </h2>
         <div class="services-grid">
           <div class="service-item">
-            <h3 class="service-title">RAG & Semantic Search Systems</h3>
-            <p class="service-subtitle">Company knowledge → ingestion → retrieval → trusted answers</p>
+            <h3 class="service-title" data-i18n="services.rag.title">RAG & Semantic Search Systems</h3>
+            <p class="service-subtitle" data-i18n="services.rag.subtitle">Company knowledge → ingestion → retrieval → trusted answers</p>
             <ul class="service-list">
               <li>Document ingestion + intelligent chunking strategies</li>
               <li>Sparse vs dense retrieval trade-offs (BM25 vs embeddings)</li>
@@ -253,8 +259,8 @@
           </div>
 
           <div class="service-item">
-            <h3 class="service-title">AI Agents & Workflow Automation</h3>
-            <p class="service-subtitle">Reliable agentic workflows with engineering rigor</p>
+            <h3 class="service-title" data-i18n="services.agents.title">AI Agents & Workflow Automation</h3>
+            <p class="service-subtitle" data-i18n="services.agents.subtitle">Reliable agentic workflows with engineering rigor</p>
             <ul class="service-list">
               <li>LangGraph-based multi-agent orchestration</li>
               <li>Guardrails: validation, fallbacks, uncertainty handling</li>
@@ -263,8 +269,8 @@
           </div>
 
           <div class="service-item">
-            <h3 class="service-title">NLP Pipelines & Fine-tuning</h3>
-            <p class="service-subtitle">Raw text → dataset → model → deployment</p>
+            <h3 class="service-title" data-i18n="services.nlp.title">NLP Pipelines & Fine-tuning</h3>
+            <p class="service-subtitle" data-i18n="services.nlp.subtitle">Raw text → dataset → model → deployment</p>
             <ul class="service-list">
               <li>Dataset creation & cleaning for real-world data</li>
               <li>Tokenization alignment & sequence labeling (NER)</li>
@@ -274,8 +280,8 @@
           </div>
 
           <div class="service-item">
-            <h3 class="service-title">Data Engineering & Reporting</h3>
-            <p class="service-subtitle">Raw data → clean analytics → actionable insights</p>
+            <h3 class="service-title" data-i18n="services.data.title">Data Engineering & Reporting</h3>
+            <p class="service-subtitle" data-i18n="services.data.subtitle">Raw data → clean analytics → actionable insights</p>
             <ul class="service-list">
               <li>Data cleaning, validation, and structured preparation</li>
               <li>Dashboards & reporting in Power BI</li>
@@ -291,7 +297,7 @@
       <div class="container">
         <h2 class="section-heading">
           <span class="heading-number">05.</span>
-          <span class="heading-text">Certifications</span>
+          <span class="heading-text" data-i18n="certifications.title">Certifications</span>
           <span class="heading-line"></span>
         </h2>
         <div class="certifications-grid">
@@ -329,15 +335,15 @@
       <div class="container">
         <h2 class="section-heading">
           <span class="heading-number">06.</span>
-          <span class="heading-text">Get In Touch</span>
+          <span class="heading-text" data-i18n="contact.title">Get In Touch</span>
           <span class="heading-line"></span>
         </h2>
         <div class="contact-content">
-          <p class="contact-text">
+          <p class="contact-text" data-i18n="contact.text">
             I'm currently looking for new opportunities, my inbox is always open. 
             Whether you have a question or just want to say hi, I'll try my best to get back to you!
           </p>
-          <a href="mailto:hamzagondal792@gmail.com" class="btn btn-large">Say Hello</a>
+          <a href="mailto:hamzagondal792@gmail.com" class="btn btn-large" data-i18n="contact.sayHello">Say Hello</a>
           <div class="social-links">
             <a href="https://www.linkedin.com/in/hamza-naseem-4a4a912a5/" target="_blank" class="social-link" aria-label="LinkedIn">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -357,11 +363,13 @@
 
   <footer class="footer">
     <div class="container">
-      <p>Designed & Built by Hamza Naseem</p>
+      <p data-i18n="footer.text">Designed & Built by Hamza Naseem</p>
     </div>
   </footer>
 
+  <script src="translations.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
+
 
